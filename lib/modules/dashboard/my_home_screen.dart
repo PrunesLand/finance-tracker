@@ -11,8 +11,8 @@ class MyHomeScreen extends StatelessWidget {
     String dateRange = 'Monthly';
     int expenditureValue = 45;
     List<BottomNavigationBarItem> items = [
-      const BottomNavigationBarItem(label: 'test', icon: Icon(Icons.home)),
-      const BottomNavigationBarItem(label: 'test', icon: Icon(Icons.home)),
+      const BottomNavigationBarItem(label: 'test1', icon: Icon(Icons.home)),
+      const BottomNavigationBarItem(label: 'test2', icon: Icon(Icons.home)),
     ];
 
     return Scaffold(
