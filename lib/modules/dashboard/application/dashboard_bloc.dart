@@ -1,3 +1,4 @@
+import 'package:finance_tracker/modules/dashboard/presentation/enum/navigation_enum.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
@@ -13,6 +14,10 @@ class DashBoardBloc extends Bloc<DashBoardEvent, DashBoardState> {
     yield* event.map(init: (e) async* {
       yield state.copyWith(
         name: 'Peter',
+      );
+    }, setPage: (e) async* {
+      yield state.copyWith(
+        page: e.type,
       );
     });
   }

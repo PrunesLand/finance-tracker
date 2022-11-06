@@ -1,1 +1,1 @@
-enum NavEnum { transaction, settings, scan }
+enum NavEnum { transaction, settings, home }

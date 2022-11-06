@@ -19,32 +19,38 @@ mixin _$DashBoardEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
+    required TResult Function(NavEnum type) setPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function(NavEnum type)? setPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function(NavEnum type)? setPage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_init value) init,
+    required TResult Function(_setPage value) setPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_init value)? init,
+    TResult Function(_setPage value)? setPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_init value)? init,
+    TResult Function(_setPage value)? setPage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -112,6 +118,7 @@ class _$_init with DiagnosticableTreeMixin implements _init {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
+    required TResult Function(NavEnum type) setPage,
   }) {
     return init();
   }
@@ -120,6 +127,7 @@ class _$_init with DiagnosticableTreeMixin implements _init {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function(NavEnum type)? setPage,
   }) {
     return init?.call();
   }
@@ -128,6 +136,7 @@ class _$_init with DiagnosticableTreeMixin implements _init {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function(NavEnum type)? setPage,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -140,6 +149,7 @@ class _$_init with DiagnosticableTreeMixin implements _init {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_init value) init,
+    required TResult Function(_setPage value) setPage,
   }) {
     return init(this);
   }
@@ -148,6 +158,7 @@ class _$_init with DiagnosticableTreeMixin implements _init {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_init value)? init,
+    TResult Function(_setPage value)? setPage,
   }) {
     return init?.call(this);
   }
@@ -156,6 +167,7 @@ class _$_init with DiagnosticableTreeMixin implements _init {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_init value)? init,
+    TResult Function(_setPage value)? setPage,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -170,8 +182,149 @@ abstract class _init implements DashBoardEvent {
 }
 
 /// @nodoc
+abstract class _$$_setPageCopyWith<$Res> {
+  factory _$$_setPageCopyWith(
+          _$_setPage value, $Res Function(_$_setPage) then) =
+      __$$_setPageCopyWithImpl<$Res>;
+  $Res call({NavEnum type});
+}
+
+/// @nodoc
+class __$$_setPageCopyWithImpl<$Res> extends _$DashBoardEventCopyWithImpl<$Res>
+    implements _$$_setPageCopyWith<$Res> {
+  __$$_setPageCopyWithImpl(_$_setPage _value, $Res Function(_$_setPage) _then)
+      : super(_value, (v) => _then(v as _$_setPage));
+
+  @override
+  _$_setPage get _value => super._value as _$_setPage;
+
+  @override
+  $Res call({
+    Object? type = freezed,
+  }) {
+    return _then(_$_setPage(
+      type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as NavEnum,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_setPage with DiagnosticableTreeMixin implements _setPage {
+  const _$_setPage(this.type);
+
+  @override
+  final NavEnum type;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'DashBoardEvent.setPage(type: $type)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'DashBoardEvent.setPage'))
+      ..add(DiagnosticsProperty('type', type));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_setPage &&
+            const DeepCollectionEquality().equals(other.type, type));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(type));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_setPageCopyWith<_$_setPage> get copyWith =>
+      __$$_setPageCopyWithImpl<_$_setPage>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(NavEnum type) setPage,
+  }) {
+    return setPage(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(NavEnum type)? setPage,
+  }) {
+    return setPage?.call(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(NavEnum type)? setPage,
+    required TResult orElse(),
+  }) {
+    if (setPage != null) {
+      return setPage(type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_init value) init,
+    required TResult Function(_setPage value) setPage,
+  }) {
+    return setPage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_init value)? init,
+    TResult Function(_setPage value)? setPage,
+  }) {
+    return setPage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_init value)? init,
+    TResult Function(_setPage value)? setPage,
+    required TResult orElse(),
+  }) {
+    if (setPage != null) {
+      return setPage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _setPage implements DashBoardEvent {
+  const factory _setPage(final NavEnum type) = _$_setPage;
+
+  NavEnum get type;
+  @JsonKey(ignore: true)
+  _$$_setPageCopyWith<_$_setPage> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$DashBoardState {
   String? get name => throw _privateConstructorUsedError;
+  NavEnum get page => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DashBoardStateCopyWith<DashBoardState> get copyWith =>
@@ -183,7 +336,7 @@ abstract class $DashBoardStateCopyWith<$Res> {
   factory $DashBoardStateCopyWith(
           DashBoardState value, $Res Function(DashBoardState) then) =
       _$DashBoardStateCopyWithImpl<$Res>;
-  $Res call({String? name});
+  $Res call({String? name, NavEnum page});
 }
 
 /// @nodoc
@@ -198,12 +351,17 @@ class _$DashBoardStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? page = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as NavEnum,
     ));
   }
 }
@@ -215,7 +373,7 @@ abstract class _$$__DashboardStateCopyWith<$Res>
           _$__DashboardState value, $Res Function(_$__DashboardState) then) =
       __$$__DashboardStateCopyWithImpl<$Res>;
   @override
-  $Res call({String? name});
+  $Res call({String? name, NavEnum page});
 }
 
 /// @nodoc
@@ -232,12 +390,17 @@ class __$$__DashboardStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? page = freezed,
   }) {
     return _then(_$__DashboardState(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as NavEnum,
     ));
   }
 }
@@ -247,14 +410,17 @@ class __$$__DashboardStateCopyWithImpl<$Res>
 class _$__DashboardState
     with DiagnosticableTreeMixin
     implements __DashboardState {
-  const _$__DashboardState({this.name});
+  const _$__DashboardState({this.name, this.page = NavEnum.home});
 
   @override
   final String? name;
+  @override
+  @JsonKey()
+  final NavEnum page;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DashBoardState(name: $name)';
+    return 'DashBoardState(name: $name, page: $page)';
   }
 
   @override
@@ -262,7 +428,8 @@ class _$__DashboardState
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'DashBoardState'))
-      ..add(DiagnosticsProperty('name', name));
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('page', page));
   }
 
   @override
@@ -270,12 +437,15 @@ class _$__DashboardState
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$__DashboardState &&
-            const DeepCollectionEquality().equals(other.name, name));
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.page, page));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(page));
 
   @JsonKey(ignore: true)
   @override
@@ -284,10 +454,13 @@ class _$__DashboardState
 }
 
 abstract class __DashboardState implements DashBoardState {
-  const factory __DashboardState({final String? name}) = _$__DashboardState;
+  const factory __DashboardState({final String? name, final NavEnum page}) =
+      _$__DashboardState;
 
   @override
   String? get name;
+  @override
+  NavEnum get page;
   @override
   @JsonKey(ignore: true)
   _$$__DashboardStateCopyWith<_$__DashboardState> get copyWith =>
