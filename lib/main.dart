@@ -1,8 +1,14 @@
 import 'package:finance_tracker/modules/index.dart';
+import 'package:finance_tracker/routing/application.dart';
+import 'package:finance_tracker/routing/router.dart';
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
+  FluroRouter router = FluroRouter();
+  Routes.configureRoutes(router);
+  Application.router = router;
   runApp(const MyApp());
 }
 
@@ -20,6 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: const MyHomeScreen(),
+      onGenerateRoute: Application.router.generator,
     );
   }
 }

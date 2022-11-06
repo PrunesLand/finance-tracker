@@ -1,71 +1,10 @@
 import 'dart:developer';
 
+import 'package:finance_tracker/modules/dashboard/presentation/main_navigation.dart';
 import 'package:flutter/material.dart';
 
 class MyHomeScreen extends StatelessWidget {
   const MyHomeScreen({Key? key}) : super(key: key);
-
-  Widget navBottom() {
-    return Material(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.list,
-                      size: 36.0,
-                    )),
-                const Text(
-                  'transactions',
-                  textAlign: TextAlign.center,
-                )
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.camera,
-                      size: 36.0,
-                    )),
-                const Text(
-                  'camera',
-                  textAlign: TextAlign.center,
-                )
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.home,
-                      size: 36.0,
-                    )),
-                const Text(
-                  'settings',
-                  textAlign: TextAlign.center,
-                )
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -140,7 +79,7 @@ class MyHomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            navBottom()
+            const MainNavigation()
           ],
         ));
   }
