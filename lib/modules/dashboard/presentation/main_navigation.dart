@@ -3,7 +3,12 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
 class MainNavigation extends StatelessWidget {
-  const MainNavigation({Key? key}) : super(key: key);
+  final Function() onPress;
+
+  const MainNavigation({
+    Key? key,
+    required this.onPress,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +24,7 @@ class MainNavigation extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: () {
-                      Application.router.navigateTo(context, '/profile');
-                    },
+                    onPressed: onPress,
                     icon: const Icon(
                       Icons.list,
                       size: 36.0,

@@ -1,8 +1,10 @@
 import 'package:finance_tracker/modules/dashboard/application/dashboard_bloc.dart';
-import 'package:finance_tracker/modules/dashboard/presentation/extension/index.dart';
+
 import 'package:finance_tracker/modules/dashboard/presentation/main_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../index.dart';
 
 class MyHomeScreen extends StatelessWidget {
   const MyHomeScreen({Key? key}) : super(key: key);
@@ -22,7 +24,7 @@ class MyHomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 state.page.pageSwitch(),
-                const MainNavigation(),
+                MainNavigation(onPress: () {}),
               ],
             ),
           ),

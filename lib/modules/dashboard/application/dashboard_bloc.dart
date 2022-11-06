@@ -11,14 +11,17 @@ class DashBoardBloc extends Bloc<DashBoardEvent, DashBoardState> {
   DashBoardBloc() : super(DashBoardState.init());
 
   Stream<DashBoardState> mapEventToState(DashBoardEvent event) async* {
-    yield* event.map(init: (e) async* {
-      yield state.copyWith(
-        name: 'Peter',
-      );
-    }, setPage: (e) async* {
-      yield state.copyWith(
-        page: e.type,
-      );
-    });
+    yield* event.map(
+      init: (e) async* {
+        yield state.copyWith(
+          name: 'Peter',
+        );
+      },
+      setPage: (e) async* {
+        yield state.copyWith(
+          page: e.type,
+        );
+      },
+    );
   }
 }
