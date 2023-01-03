@@ -1,5 +1,7 @@
+import 'package:finance_tracker/modules/dashboard/index.dart';
 import 'package:finance_tracker/routing/application.dart';
 import 'package:fluro/fluro.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class MainNavigation extends StatelessWidget {
@@ -18,22 +20,18 @@ class MainNavigation extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                IconButton(
-                    onPressed: onPress,
-                    icon: const Icon(
-                      Icons.list,
-                      size: 36.0,
-                    )),
-                const Text(
-                  'transactions',
-                  textAlign: TextAlign.center,
-                )
-              ],
+          children: const [
+            NavIcon(
+              key: Key('Transaction'),
+              label: NavEnum.transaction,
+              navIcon: Icons.list,
+              path: '/profile',
+            ),
+            NavIcon(
+              key: Key('Profile'),
+              label: NavEnum.settings,
+              navIcon: Icons.person,
+              path: '/',
             ),
           ],
         ),
